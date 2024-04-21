@@ -1,4 +1,4 @@
-const serverUrl = process.env.ServerUrl;
+const serverUrl = JSON.stringify(process.env.ServerUrl);
 let testSpan  = document.querySelector('.test-span'); 
 testSpan.textContent = serverUrl;
 
