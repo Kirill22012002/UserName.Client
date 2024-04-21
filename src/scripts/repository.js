@@ -1,4 +1,6 @@
-let serverUrl = 'http://localhost:5147';
+const serverUrl = window.ServerUrl;
+
+//let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
 
 function startNewWorkout() {
