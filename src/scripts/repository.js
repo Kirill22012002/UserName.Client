@@ -1,6 +1,4 @@
-const SERVER_URL = import.meta.env.SERVER_URL;
-let testSpan  = document.querySelector('.test-span'); 
-testSpan.textContent = SERVER_URL;
+let serverUrl = 'https://username-eic5.onrender.com';
 //let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
 
