@@ -1,4 +1,4 @@
-const serverUrl = window.ServerUrl;
+const serverUrl = process.env.ServerUrl;
 
 //let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
