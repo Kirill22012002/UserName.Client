@@ -1,7 +1,6 @@
-const serverUrl = "${process.env.ServerUrl}";
+const serverUrl = process.env.SERVER_URL;
 let testSpan  = document.querySelector('.test-span'); 
 testSpan.textContent = serverUrl;
-
 //let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
 
