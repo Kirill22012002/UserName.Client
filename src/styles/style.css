@@ -30,7 +30,7 @@ body {
 }
   
 @media (min-height: 800px){
-    .header, .footer {
+    .header, .footer, .first-block, .second-block {
         width: calc(100% - 70px);
         display: flex;
         position: absolute;
@@ -38,6 +38,9 @@ body {
         justify-content: space-between;
     }
 
+    .first-block, .second-block {
+        top: 20px;
+    }
     .footer {
         bottom: 36px;
     }
