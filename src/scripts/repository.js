@@ -1,6 +1,25 @@
-let serverUrl = 'https://username-eic5.onrender.com';
-//let serverUrl = 'http://localhost:5147';
+//let serverUrl = 'http://username-eic5.onrender.com';
+let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
+
+function pingServer() {
+    fetch(serverUrl + '/Ping')
+        .then((response) => response.json())
+        .then((json) => {
+            let ping = document.querySelector('.ping');
+            ping.textContent = json;
+        });
+}
+
+function pingDb() {
+    fetch(serverUrl + '/api/workout/Excercise/GetAllExcercises')
+        .then((response) => {
+            if (response.status == 200) {
+                let pingStatus = document.querySelector('.ping-status');
+                pingStatus.textContent = 1;
+            }
+        });
+}
 
 function startNewWorkout() {
     fetch(serverUrl + '/api/workout/StartNewWorkout')

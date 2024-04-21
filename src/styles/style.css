@@ -30,18 +30,28 @@ body {
 }
   
 @media (min-height: 800px){
-    .header, .footer, .first-block, .second-block {
+     .header {
+        width: calc(100% - 70px);
+        display: flex;
+        /* position: absolute; */
+        align-items: baseline;
+        justify-content: space-between;
+    } 
+
+    .ping-block{
+        width: calc(100% - 70px);
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .footer {
         width: calc(100% - 70px);
         display: flex;
         position: absolute;
         align-items: baseline;
         justify-content: space-between;
-    }
-
-    .first-block, .second-block {
-        top: 20px;
-    }
-    .footer {
         bottom: 36px;
     }
 }
@@ -52,31 +62,27 @@ body {
     margin: 0;
 }
   
-.start-workout {
+.start-workout, .ping-server, .ping-db {
     background-color: green;
     padding: 10px;
     border-radius: 5px;
+    cursor:pointer;
 }
 
 .end-workout{
     background-color: blue;
     padding: 10px;
     border-radius: 5px;
+    cursor:pointer;
 }
   
-.startWorkout:hover {
+.startWorkout, .end-workout .ping-server, .ping-db:hover {
     opacity: 0.5;
 }
-  
-.image {
-    width: 80%;
-    display: block;
-    margin: 60px auto 50px;
-}
-  
+
 .advice {
     font-size: 42px;
     font-weight: bold;
     line-height: 1.1;
-    margin-bottom: 70px;
-}
+    padding-top: 16px;
+} 
