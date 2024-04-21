@@ -3,7 +3,7 @@ let serverUrl = 'https://username-eic5.onrender.com';
 let workoutId = 'workoutId';
 
 function startNewWorkout() {
-    fetch(SERVER_URL + '/api/workout/StartNewWorkout')
+    fetch(serverUrl + '/api/workout/StartNewWorkout')
         .then((response) => response.json())
         .then((json) => { 
             localStorage.setItem(workoutId, JSON.stringify(json));
@@ -13,7 +13,7 @@ function startNewWorkout() {
 }
 
 function endWorkout() {
-    fetch(SERVER_URL + '/api/workout/EndWorkout?workoutId=' + localStorage.getItem(workoutId))
+    fetch(serverUrl + '/api/workout/EndWorkout?workoutId=' + localStorage.getItem(workoutId))
         .then((response) => {
             let status = response.status;
             let endedMessage = document.querySelector('.ended-message');
