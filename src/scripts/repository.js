@@ -1,11 +1,11 @@
-const serverUrl = process.env.SERVER_URL;
+const SERVER_URL = import.meta.env.SERVER_URL;
 let testSpan  = document.querySelector('.test-span'); 
-testSpan.textContent = serverUrl;
+testSpan.textContent = SERVER_URL;
 //let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
 
 function startNewWorkout() {
-    fetch(serverUrl + '/api/workout/StartNewWorkout')
+    fetch(SERVER_URL + '/api/workout/StartNewWorkout')
         .then((response) => response.json())
         .then((json) => { 
             localStorage.setItem(workoutId, JSON.stringify(json));
@@ -15,7 +15,7 @@ function startNewWorkout() {
 }
 
 function endWorkout() {
-    fetch(serverUrl + '/api/workout/EndWorkout?workoutId=' + localStorage.getItem(workoutId))
+    fetch(SERVER_URL + '/api/workout/EndWorkout?workoutId=' + localStorage.getItem(workoutId))
         .then((response) => {
             let status = response.status;
             let endedMessage = document.querySelector('.ended-message');
