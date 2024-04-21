@@ -1,4 +1,4 @@
-let serverUrl = 'http://username-eic5.onrender.com';
+let serverUrl = 'https://username-eic5.onrender.com';
 //let serverUrl = 'http://localhost:5147';
 let workoutId = 'workoutId';
 
